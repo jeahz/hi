@@ -1,0 +1,132 @@
+$image-width: 360px;
+$image-height: 360px;
+$primary-color: rgb(0, 119, 255);
+
+.image-generator {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  h1 {
+    color: $primary-color;
+    text-align: center;
+
+    @media (max-width: 550px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .image-button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    height: min-content;
+    margin: auto;
+
+    @media (max-width: 550px) {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .images-container {
+      position: relative;
+      width: $image-width;
+      height: $image-height;
+
+      img {
+        width: $image-width;
+        height: $image-height;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &.accessories {
+          z-index: 6;
+        }
+
+        &.ears {
+          z-index: 3;
+        }
+
+        &.eyes {
+          z-index: 5;
+        }
+
+        &.hair {
+          z-index: 4;
+        }
+
+        &.leg {
+          z-index: 2;
+        }
+
+        &.mouth {
+          z-index: 4;
+        }
+
+        &.neck {
+          z-index: 2;
+        }
+
+        &.nose {
+          z-index: 3;
+        }
+      }
+    }
+
+    .customize-buttons-container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      max-width: 45%;
+      row-gap: 50px;
+
+      .customize-part-buttons,
+      .customize-style-buttons {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .customize-title {
+          font-size: 20px;
+          color: rgb(0, 119, 255);
+        }
+
+        .customize-buttons {
+          display: flex;
+          flex-wrap: wrap;
+          column-gap: 5px;
+          row-gap: 10px;
+          justify-content: space-around;
+          align-content: center;
+          min-width: 150px;
+        }
+      }
+
+      button {
+        height: auto;
+        background-color: $primary-color;
+        border: 3px solid #fff;
+        border-radius: 8px;
+        font-size: 15px;
+        padding: 5px 10px 5px 10px;
+
+        &[data-chosen="true"] {
+          background-color: $primary-color;
+          border: 3px solid $primary-color;
+        }
+
+        &[data-chosen="false"] {
+          background-color: rgb(255, 255, 255);
+          border: 3px solid rgb(87, 132, 184);
+          color: rgb(87, 132, 184);
+        }
+
+      }
+    }
+  }
+}
+
+

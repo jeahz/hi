@@ -1,0 +1,48 @@
+#drum-container {
+  display: flex;
+  width: 80vw;
+  margin: auto;
+}
+
+#drum-machine {
+    width: 50vw;
+    height: 50vw;
+    background-color: #3bd8ff;
+    margin: auto;
+  }
+  
+  .drum-pad {
+    width: auto;
+    height: auto;
+    font-size: 20px;
+  }
+  
+  .pad-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr );
+    gap: 0.05vw;
+    padding: 1vw;
+    height: 100%;
+    margin: auto;
+    background-color: salmon;
+  }
+
+  #display-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  #display-drum {
+    width: 20vw;
+    height: 5vw;
+    font-size: 15px;
+    padding: 5px;
+    margin-top: 5vw;
+  }
+
+  @media screen and (max-width: 550px){
+    #drum-container {
+      width: 90vw;
+      flex-direction: column;
+    }
+  }

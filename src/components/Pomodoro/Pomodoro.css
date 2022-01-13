@@ -1,0 +1,82 @@
+  .container-fluid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 25vh auto;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .container-fluid i {
+    color: #fff;
+  }
+
+  .lengths-container {
+      display: flex;
+      min-width: 100%;
+      justify-content: space-around
+  }
+  
+  .length-container {
+    background-color: #000;
+    display: flex;
+    margin: 0 0 20vh;
+    padding: 1vw;
+    min-height: 10vw;
+    flex-direction: column;
+    place-content: center space-between;
+  }
+  
+  .length-label, .length-control {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }
+  
+  .length-control {
+      min-width: 20vw;
+  }
+
+  .length-label {
+    width: auto;
+  }
+
+  
+  .container-fluid button {
+    background-color: transparent;
+    border: transparent;
+  }
+  
+  .timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 50%;
+    min-height: 50vh;
+    background-color: #000;
+  }
+  
+  .length-control input {
+    color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #000;
+    max-width: 40%;
+  }
+
+  @media screen and (max-width: 550px) {
+    .container-fluid {
+        font-size: 15px;
+    } 
+
+    .length-control {
+        min-width: 50vw
+    }
+
+    .lengths-container {
+        flex-direction: column
+    }
+
+  }

@@ -1,0 +1,154 @@
+  .calc-container {
+    margin: auto;
+    width: 40vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  #calculator {
+    width: 100%;
+    height: 100%;
+    padding: 1vw;
+    background-color: #8e8e8e;
+    border-radius: 10px;
+  }
+  
+  #display-calc {
+    color: #fff;
+    font-family: 'Inconsolata', monospace;
+    width: 100%;
+    height: 14vw;
+    background-color: #000;
+    display: flex;
+    padding: 1vw;
+    box-sizing: border-box;
+    font-size: 4vw;
+    overflow-wrap: anywhere;
+    overflow-y: auto;
+  }
+  
+  #clear {
+    grid-area: clear;
+  }
+  
+  #divide {
+    grid-area: divide;
+  }
+  
+  #multiply {
+    grid-area: multiply;
+  }
+  
+  #seven {
+    grid-area: seven;
+  }
+  
+  #eight {
+    grid-area: eight;
+  }
+  
+  #nine {
+    grid-area: nine;
+  }
+  
+  #subtract {
+    grid-area: subtract;
+  }
+  
+  #four {
+    grid-area: four;
+  }
+  
+  #five {
+    grid-area: five;
+  }
+  
+  #six {
+    grid-area: six;
+  }
+  
+  #add {
+    grid-area: add;
+  }
+  
+  #one {
+    grid-area: one;
+  }
+  
+  #two {
+    grid-area: two;
+  }
+  
+  #three {
+    grid-area: three;
+  }
+  
+  #equals {
+    grid-area: equals;
+  }
+  
+  #zero {
+    grid-area: zero;
+  }
+  
+  #decimal {
+    grid-area: decimal;
+  }
+  
+  #button-area {
+    
+    display: grid;
+    grid-template-areas: 
+    'clear clear divide multiply'
+    'seven eight nine subtract'
+    'four five six add'
+    'one two three equals'
+    'zero zero decimal equals'
+  }
+  
+  #button-area > button {
+    font-family: 'Inconsolata', monospace;
+    font-size: 4vw;
+    min-height: 5vw;
+    border: 1px solid #2e6c64;
+    color: #000;
+    background-color: #00ffc3;
+    transition: 0.05s;
+  }
+  
+  #button-area > button:hover{
+    background-color: #00ff7a;
+    border: 1px solid #00ff7a;
+    color: #eae;
+  }
+  
+  #button-area > button:active{
+    background-color: #229e30;
+    border: 1px solid #229e30;
+    color: #a7ffea;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .calc-container {
+      margin-top: 35vw;
+      width: 90vw;
+    }
+    
+    #calculator {
+      width: 100vw;
+    }
+    
+    #display-calc, #button-area button {
+      font-size: 8vw;
+    }
+
+    #display-calc {
+      min-height: 35vw;
+    }
+
+    #button-area button {
+      min-height: 15vw;
+    }
+  }
+  
