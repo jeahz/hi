@@ -55,8 +55,8 @@ export default class ImageGenerator extends Component {
     if (this.arrayStateProperties.includes(this.state.currentCustomizePart)) {
 
       if (e.target.dataset.chosen === 'true') {
-        const toRemoveIndex = this.state.avatarParts[this.state.currentCustomizePart].indexOf(e.target.id)
-        console.log(toRemoveIndex)
+        const toRemoveIndex = this.state.avatarParts[this.state.currentCustomizePart].indexOf(e.target.id);
+
         e.target.dataset.chosen = false;
 
         this.setState({

@@ -19,8 +19,6 @@ function BackToTop() {
 
     return () => {
       window.addEventListener("scroll", detectOnScroll);
-
-      console.log("11111 Do some cleanup");
     };
   }, []);
 
