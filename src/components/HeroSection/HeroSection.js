@@ -48,7 +48,7 @@ class HeroSection extends React.Component {
 		return (
 			<div id="hero-container">
 				<div className="explanation">
-					<h1 className="hero-exp">Jeahz</h1>
+					<h1 className="hero-exp">Jeahzre</h1>
 					<p className="hero-exp">A student</p>
 				</div>
 			</div>

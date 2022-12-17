@@ -7,9 +7,9 @@ import Pomodoro from './components/Pomodoro/Pomodoro';
 import MarkdownPreviewer from './components/MarkdownPreviewer/MarkdownPreviewer';
 import AvatarGenerator from './components/AvatarGenerator/ImageGenerator';
 import ScrollToTop from './components/ScrollToTop';
+import BackToTop from './components/BackToTop/BackToTop';
 import { useEffect } from 'react'
 import './App.css';
-
 
 function App() {
 
@@ -28,16 +28,17 @@ function App() {
 
   return (
     <>
-      <Router basename={window.location.pathname || ''}>
+      <Router>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/calculator" component={Calculator} />
+          <Route path="/calculator" exact component={Calculator} />
           <Route path="/drum-machine" component={DrumMachine} />
           <Route path="/pomodoro" component={Pomodoro} />
           <Route path="/markdown-previewer" component={MarkdownPreviewer} />
           <Route path="/avatar-generator" component={AvatarGenerator} />
         </Switch>
         <ScrollToTop />
+        <BackToTop />
       </Router>
     </>
   );

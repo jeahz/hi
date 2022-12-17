@@ -1,6 +1,6 @@
 import React from 'react';
-import CardItem from '../CardItem/CardItem'
-import './Cards.css'
+import CardItem from '../CardItem/CardItem';
+import './Cards.scss';
 
 const Cards = () => {
   return (

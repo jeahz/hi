@@ -1,0 +1,12 @@
+.back-to-top-button {
+    display: none;
+    width: 25px;
+    height: 25px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    &.show {
+        display: initial;
+    }
+}
