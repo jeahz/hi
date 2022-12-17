@@ -11,6 +11,8 @@ import BackToTop from './components/BackToTop/BackToTop';
 import { useEffect } from 'react'
 import './App.css';
 
+export const BASE_PATH = '/hi';
+
 function App() {
 
   // :active effect doesn't last forever when mobile's user press something 
@@ -28,7 +30,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      <Router basename={ BASE_PATH }>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/calculator" exact component={Calculator} />
