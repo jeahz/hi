@@ -1,5 +1,6 @@
 import React from 'react';
 import CardItem from '../CardItem/CardItem';
+import { cards } from './Cards.config';
 import './Cards.scss';
 
 const Cards = () => {
@@ -8,26 +9,19 @@ const Cards = () => {
       <h1>My Projects</h1>
 
        <div className="cards__items">
-         <CardItem
-          text="Calculator ➕➖"
-          label="calculator"
-          path="/calculator"/>
-         <CardItem
-          text="Drum Machine 🥁"
-          label="drum-machine"
-          path="/drum-machine"/>
-         <CardItem
-          text="Pomodoro 🕓"
-          label="pomodoro"
-          path="/pomodoro"/>
-         <CardItem
-          text="Markdown Previewer 📝"
-          label="markdown-previewer"
-          path="/markdown-previewer"/>
-         <CardItem
-          text="Avatar Generator 🐴️"
-          label="avatar-generator"
-          path="/avatar-generator"/>
+        {
+          cards.map((card) => {
+            const { text, label } = card;
+
+            return (
+              <CardItem
+              text={ text }
+              label={ label }
+              path={ '/' + label }
+              />
+            )
+          })
+        }
       </div>
     </div> 
     )

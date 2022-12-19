@@ -8,6 +8,7 @@ import MarkdownPreviewer from './components/MarkdownPreviewer/MarkdownPreviewer'
 import AvatarGenerator from './components/AvatarGenerator/ImageGenerator';
 import ScrollToTop from './components/ScrollToTop';
 import BackToTop from './components/BackToTop/BackToTop';
+import WeatherBoard from './components/WeatherApp/WeatherBoard';
 import { useEffect } from 'react'
 import './App.css';
 
@@ -38,6 +39,7 @@ function App() {
           <Route path="/pomodoro" component={Pomodoro} />
           <Route path="/markdown-previewer" component={MarkdownPreviewer} />
           <Route path="/avatar-generator" component={AvatarGenerator} />
+          <Route path="/weather-app" component={WeatherBoard} />
         </Switch>
         <ScrollToTop />
         <BackToTop />
