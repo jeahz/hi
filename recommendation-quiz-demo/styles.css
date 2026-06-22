@@ -22,6 +22,42 @@ body {
 .view { display: none; }
 .view.is-active { display: block; }
 
+.site-header {
+  max-width: 720px;
+  margin: 0 auto 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-back {
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.site-back:hover { color: var(--accent); }
+
+.site-tag {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.site-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--accent);
+  display: inline-block;
+}
+
 .nav {
   max-width: 720px;
   margin: 0 auto 20px;
