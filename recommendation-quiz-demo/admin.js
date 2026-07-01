@@ -182,3 +182,5 @@ const Admin = (() => {
 
   return { init, render };
 })();
+
+window.Admin = Admin;

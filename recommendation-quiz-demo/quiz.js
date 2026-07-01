@@ -79,3 +79,5 @@ const Quiz = (() => {
 
   return { start };
 })();
+
+window.Quiz = Quiz;

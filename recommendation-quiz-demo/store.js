@@ -43,3 +43,5 @@ const Store = {
   addResult: (r) => write(KEYS.results, [...read(KEYS.results, []), r]),
   clearResults: () => localStorage.removeItem(KEYS.results),
 };
+
+window.Store = Store;

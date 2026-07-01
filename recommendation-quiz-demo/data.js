@@ -33,3 +33,6 @@ const DEFAULT_PRODUCTS = [
   { name: "Solid Firm",  desc: "Firm support for back/front.",     tags: ["firm"] },
   { name: "Cool Breeze", desc: "Temperature-regulating comfort.",  tags: ["cooling", "medium"] },
 ];
+
+window.DEFAULT_QUESTIONS = DEFAULT_QUESTIONS;
+window.DEFAULT_PRODUCTS = DEFAULT_PRODUCTS;
