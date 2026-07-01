@@ -1,21 +1,44 @@
-:root {
-  --bg: #0f1115;
-  --card: #1a1d24;
-  --accent: #4f8cff;
-  --text: #e7e9ee;
-  --muted: #9aa0ab;
-  --radius: 14px;
-}
+/* Design tokens come from the shared /hi/theme.css (light + dark). */
 
 * { box-sizing: border-box; }
+
+/* Floating light/dark toggle — matches the app's ThemeToggle. */
+.theme-toggle {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 60;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-3);
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .05), 0 10px 24px -14px rgba(0, 0, 0, .35);
+  transition: background .18s, color .18s, border-color .18s, transform .18s;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
 
 body {
   margin: 0;
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-family: "Space Grotesk", "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
   padding: 24px;
+  transition: background-color .3s ease, color .3s ease;
 }
 
 /* Views: only the active one shows. No reload when switching. */
@@ -67,7 +90,7 @@ body {
 
 .nav__link {
   padding: 8px 16px;
-  border: 1px solid #2a2e38;
+  border: 1px solid var(--border);
   border-radius: 999px;
   background: transparent;
   color: var(--muted);
@@ -76,9 +99,9 @@ body {
 }
 
 .nav__link.is-active {
-  color: #fff;
+  color: var(--chip-fg);
   border-color: var(--accent);
-  background: rgba(79, 140, 255, 0.12);
+  background: var(--chip-bg);
 }
 
 .quiz {
@@ -86,9 +109,10 @@ body {
   max-width: 480px;
   margin: 0 auto;
   background: var(--card);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 28px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
 /* --- Admin --- */
@@ -101,6 +125,7 @@ body {
 
 .panel {
   background: var(--card);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 20px 22px;
   margin-bottom: 18px;
@@ -123,7 +148,7 @@ body {
 .input {
   flex: 1;
   padding: 9px 12px;
-  border: 1px solid #2a2e38;
+  border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--bg);
   color: var(--text);
@@ -136,7 +161,7 @@ body {
 
 .question-edit {
   padding: 12px;
-  border: 1px solid #2a2e38;
+  border: 1px solid var(--border);
   border-radius: 10px;
   margin-bottom: 12px;
 }
@@ -144,7 +169,7 @@ body {
 .options-edit {
   margin-top: 8px;
   padding-left: 14px;
-  border-left: 2px solid #2a2e38;
+  border-left: 2px solid var(--border);
 }
 
 .row--indent { margin-bottom: 6px; }
@@ -163,7 +188,7 @@ body {
 
 .btn--ghost {
   background: transparent;
-  border-color: #2a2e38;
+  border-color: var(--border);
   color: var(--muted);
 }
 
@@ -179,7 +204,7 @@ body {
 .table td {
   text-align: left;
   padding: 8px 10px;
-  border-bottom: 1px solid #2a2e38;
+  border-bottom: 1px solid var(--border);
 }
 
 .table th { color: var(--muted); font-weight: 500; }
@@ -191,7 +216,7 @@ body {
 
 .quiz__progress {
   height: 6px;
-  background: #2a2e38;
+  background: var(--border);
   border-radius: 999px;
   overflow: hidden;
 }
@@ -219,7 +244,7 @@ body {
 .option {
   text-align: left;
   padding: 14px 16px;
-  border: 1px solid #2a2e38;
+  border: 1px solid var(--border);
   border-radius: 10px;
   background: transparent;
   color: var(--text);
@@ -230,7 +255,7 @@ body {
 
 .option:hover {
   border-color: var(--accent);
-  background: rgba(79, 140, 255, 0.08);
+  background: var(--chip-bg);
 }
 
 .result {

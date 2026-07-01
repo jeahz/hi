@@ -1,0 +1,4 @@
+:HL["/hi/_next/static/chunks/27y_db65kgdg6.css","style"]
+:HL["/hi/_next/static/chunks/24ak-09degsfk.css","style"]
+:HL["/hi/theme.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"i18n","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"VIhMVE_Iu7hS7IAOr5Q4z"}

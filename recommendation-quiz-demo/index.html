@@ -4,9 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product Recommendation Quiz</title>
+  <!-- Apply saved/system theme before paint (no flash), same key as the app. -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="/hi/theme.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"></button>
+
   <header class="site-header">
     <a class="site-back" href="/hi/">← Jhazzh</a>
     <span class="site-tag"><span class="site-dot"></span>Project 07</span>
@@ -50,6 +65,25 @@
       <div id="admin-results"></div>
     </section>
   </main>
+
+  <!-- Light/dark toggle, kept in sync with the rest of the site. -->
+  <script>
+    (function () {
+      var btn = document.getElementById("theme-toggle");
+      var root = document.documentElement;
+      function sync() {
+        var dark = root.getAttribute("data-theme") === "dark";
+        btn.textContent = dark ? "☀" : "☾";
+      }
+      sync();
+      btn.addEventListener("click", function () {
+        var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("theme", next); } catch (e) {}
+        sync();
+      });
+    })();
+  </script>
 
   <script src="data.js"></script>
   <script src="store.js"></script>
