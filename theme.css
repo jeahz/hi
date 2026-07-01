@@ -5,27 +5,30 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Newsreader:opsz,wght@6..72,300..500&family=Space+Grotesk:wght@300..600&family=JetBrains+Mono:wght@400;500&display=swap");
 
+/* Palette from the Portfolio.dc design: charcoal canvas + lime accent.
+ * Light mode is a warm off-white variant keeping the same lime. */
+
 :root {
   --page-max: 1040px;
   --wrapper-padding-inline: 24px;
-  --bg: #FBFAF7;
+  --bg: #F5F3EC;
   --surface: #FFFFFF;
-  --surface-2: #F6F4EE;
-  --surface-3: #F7F5EF;
-  --surface-4: #F2F0E9;
-  --text: #1A1A17;
-  --text-2: #46443D;
-  --text-3: #6E6A60;
-  --muted: #9A968B;
-  --faint: #B6B1A4;
-  --border: #EBE7DE;
-  --border-2: #E3DFD5;
-  --line: #EFEBE2;
-  --accent: oklch(0.56 0.13 256);
-  --accent-strong: oklch(0.52 0.13 256);
-  --accent-soft: oklch(0.82 0.06 256);
-  --chip-bg: #EAF0FB;
-  --chip-fg: oklch(0.45 0.13 256);
+  --surface-2: #ECEAE1;
+  --surface-3: #EFEDE4;
+  --surface-4: #E7E4DA;
+  --text: #141310;
+  --text-2: #45423B;
+  --text-3: #6E6A62;
+  --muted: #8A867C;
+  --faint: #B4B0A6;
+  --border: #D8D4C8;
+  --border-2: #CFCABD;
+  --line: #E3DFD5;
+  --accent: #6B8E12;          /* lime, darkened for contrast on light bg */
+  --accent-strong: #557010;
+  --accent-soft: #E2EFB8;
+  --chip-bg: #EBF3D3;
+  --chip-fg: #4C6410;
   --code: #8a4b2f;
   --danger: #b4453f;
 
@@ -35,24 +38,24 @@
 }
 
 [data-theme="dark"] {
-  --bg: #000;
-  --surface: #1E1E1E;
-  --surface-2: #26241E;
-  --surface-3: #2B2922;
-  --surface-4: #0F0F0F;
-  --text: #ECE9E1;
-  --text-2: #C7C2B5;
-  --text-3: #DDF3DF;
-  --muted: #CECECE;
-  --faint: #6E6A60;
-  --border: #34322A;
-  --border-2: #3A382F;
-  --line: #2E2C24;
-  --accent: oklch(0.64 0.13 256);
-  --accent-strong: oklch(0.70 0.13 256);
-  --accent-soft: oklch(0.45 0.06 256);
-  --chip-bg: oklch(0.34 0.05 256);
-  --chip-fg: oklch(0.80 0.10 256);
+  --bg: #141310;
+  --surface: #1A1815;
+  --surface-2: #1E1B18;
+  --surface-3: #232019;
+  --surface-4: #0F0E0B;
+  --text: #F5F3EE;
+  --text-2: #B4B0A6;
+  --text-3: #928E85;
+  --muted: #8A867C;
+  --faint: #4A4842;
+  --border: #2A2823;
+  --border-2: #33302A;
+  --line: #221F1B;
+  --accent: #C7F24A;          /* lime */
+  --accent-strong: #D6F96A;
+  --accent-soft: #3A4A16;
+  --chip-bg: #262E12;
+  --chip-fg: #C7F24A;
   --code: #d99a6c;
   --danger: #e0726b;
 }
